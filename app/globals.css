@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&family=Lilita+One&family=Moirai+One&family=Montserrat+Alternates:wght@200;600;800;900&family=Open+Sans:wght@300;500;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-main: #111827;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+@layer components {
+  .line {
+    @apply rounded-md relative w-full mb-1 overflow-hidden shadow-lg;
+  }
+  .line-span {
+    @apply bg-[var(--background-main)] text-sm text-[rgb(256,256,256,.6)] absolute top-0 left-0 h-full w-8 grid place-items-center z-10;
+  }
+  .line-p {
+    @apply relative left-6 h-full overflow-hidden;
+  }
+  img {
+    @apply rounded-xl shadow-lg;
+  }
+}
+
+:is(.hljs code, .output, .btn) {
+  background: var(--background-main);
+}
