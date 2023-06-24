@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="h-screen bg-gray-900 font-montserrat">
       <section className="grid h-[70%] place-items-center">
-        <h1 className="h-[60%] w-[50%] text-center font-moirai text-5xl font-extrabold tracking-wider">
+        <h1 className="h-[60%] w-[50%] text-center font-lilita text-5xl font-extrabold tracking-wider">
           <span className="bg-gradient-to-r from-rose-500 to-teal-500 bg-clip-text text-transparent">
             Understand Cover Flow. Increase your Angels
           </span>

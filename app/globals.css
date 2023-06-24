@@ -7,6 +7,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-main: #111827;
 }
 html {
   scroll-behavior: smooth;
@@ -14,7 +15,6 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-main: #111827;
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -28,16 +28,13 @@ body {
 
 @layer components {
   .line {
-    @apply rounded-md relative w-full mb-1 overflow-hidden shadow-lg;
+    @apply relative mb-1 w-full overflow-hidden rounded-md shadow-lg;
   }
   .line-span {
-    @apply bg-[var(--background-main)] text-sm text-[rgb(256,256,256,.6)] absolute top-0 left-0 h-full w-8 grid place-items-center z-10;
+    @apply absolute left-0 top-0 z-10 grid h-full w-8 place-items-center bg-[var(--background-main)] text-sm text-[rgb(256,256,256,.6)];
   }
   .line-p {
     @apply relative left-6 h-full overflow-hidden;
-  }
-  img {
-    @apply rounded-xl shadow-lg;
   }
 }
 

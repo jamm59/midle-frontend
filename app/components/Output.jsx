@@ -1,10 +1,22 @@
 "use client";
-//import Button from "@mui/material/Button";
-//import ButtonGroup from "@mui/material/ButtonGroup";
-export default function Code({ codeFile }) {
+import { twMerge } from "tailwind-merge";
+import { useEffect } from "react";
+import { hljs } from "../../lib/stuff";
+import "highlight.js/styles/atom-one-dark.css";
+
+export default function Code({ codeFile, class_name }) {
+  class_name = class_name
+    ? twMerge(
+        "output relative col-span-2 flex h-full flex-col items-center",
+        class_name
+      )
+    : "output relative col-span-2 flex h-full flex-col items-center";
+  useEffect(() => {
+    hljs.highlightAll();
+  }, []);
   return (
     <>
-      <div className="output relative col-span-2 flex flex-col items-center after:justify-around">
+      <div className={class_name}>
         <div className="px-1">
           {codeFile.split("\n").map((line, index) => {
             return (
