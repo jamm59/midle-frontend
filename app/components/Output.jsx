@@ -4,44 +4,47 @@ import { useEffect } from "react";
 import { hljs } from "../../lib/stuff";
 import "highlight.js/styles/atom-one-dark.css";
 
-export default function Code({ codeFile, class_name }) {
-  class_name = class_name
-    ? twMerge(
-        "output relative col-span-2 flex h-full flex-col items-center",
-        class_name
-      )
-    : "output relative col-span-2 flex h-full flex-col items-center";
+export default function Code({
+  codeFile,
+  codeLanguage,
+  class_name,
+  label = true,
+}) {
+  const original =
+    "output relative col-span-2 flex h-full flex-col items-center sm:w-full !overflow-hidden rounded-md";
+  class_name = class_name ? twMerge(original, class_name) : original;
   useEffect(() => {
     hljs.highlightAll();
   }, []);
   return (
-    <>
-      <div className={class_name}>
-        <div className="px-1">
-          {codeFile.split("\n").map((line, index) => {
-            return (
-              <div
-                style={{
-                  "--steps-character": line ? line.length : 0,
-                }}
-                className="line relative z-10 before:absolute before:inset-0 
-                before:z-20 before:animate-typing before:bg-[var(--background-main)]"
-                key={index}
+    <div
+      className="relative col-span-2 flex flex-col items-center border-[var(--background-main)] bg-gray-900 px-2 py-3 sm:h-full
+    sm:rounded-md "
+    >
+      <div className="my-2 flex w-full flex-col items-center rounded-md px-1 font-mono">
+        {codeFile.split("\n").map((line, index) => {
+          return (
+            <div className="line" key={index}>
+              <span className="line-span font-black">{">"}</span>
+              <pre
+                className="line-p hljs"
+                style={{ background: "var(--background-main)" }}
               >
-                <pre
-                  className="line-p hljs"
-                  style={{ background: "var(--background-main)" }}
-                >
-                  <code className="language-python">{line}</code>
-                </pre>
-              </div>
-            );
-          })}
-        </div>
-        <h3 className="absolute bottom-5 grid h-16 place-items-center font-lilita text-3xl font-black tracking-wide">
-          Output
-        </h3>
+                <code className={`language-${codeLanguage.toLowerCase()}`}>
+                  {line}
+                </code>
+              </pre>
+            </div>
+          );
+        })}
+        {label ? (
+          <div className="absolute bottom-5 font-lilita text-3xl font-black text-white">
+            OUTPUT
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
-    </>
+    </div>
   );
 }

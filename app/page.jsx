@@ -12,12 +12,12 @@ export default function Home() {
   return "No even numbers found!"`;
   const codeLanguage = "PYTHON";
   return (
-    <>
+    <div className="container w-auto">
       <Header />
       <Section />
       <MidSection />
       <CodeSection codeFile={codeFile} codeLanguage={codeLanguage} />
       <Footer />
-    </>
+    </div>
   );
 }

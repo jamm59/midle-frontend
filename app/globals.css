@@ -28,16 +28,20 @@ body {
 
 @layer components {
   .line {
-    @apply relative mb-1 w-full overflow-hidden rounded-md shadow-lg;
+    @apply relative mb-[0.1rem] w-full overflow-hidden rounded-md shadow-lg;
   }
   .line-span {
     @apply absolute left-0 top-0 z-10 grid h-full w-8 place-items-center bg-[var(--background-main)] text-sm text-[rgb(256,256,256,.6)];
   }
   .line-p {
-    @apply relative left-6 h-full overflow-hidden;
+    @apply relative left-6 h-full overflow-hidden sm:static;
   }
 }
 
 :is(.hljs code, .output, .btn) {
   background: var(--background-main);
+}
+.hljs {
+  background-color: orange;
+  width: inherit;
 }

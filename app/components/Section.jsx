@@ -4,13 +4,16 @@ export default function Section() {
     Math.floor(Math.random() * 4)
   ];
   return (
-    <section className="m-auto grid h-screen w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl">
+    <section
+      className="m-auto grid h-fit min-h-screen w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl
+    sm:grid-cols-1 sm:grid-rows-3"
+    >
       <div className="grid place-items-center rounded-md bg-rose-600">
         <div className="grid place-items-center p-2">
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             How does it work?
           </h3>
-          <p className="mb-10 w-[90%] text-left font-montserrat">
+          <p className="mb-10 w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus modi
             sequi repudiandae, exercitationem repellat ipsa, excepturi dolor
             mollitia facere, ipsum harum ut. Numquam perferendis iusto
@@ -19,7 +22,7 @@ export default function Section() {
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's just similation
           </h3>
-          <p className="w-[90%] text-left font-montserrat">
+          <p className="w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus modi
             sequi repudiandae, exercitationem repellat ipsa, excepturi dolor
             mollitia facere, ipsum harum.
@@ -44,7 +47,7 @@ export default function Section() {
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's not a compiler!
           </h3>
-          <p className="mb-10 w-[90%] text-left font-montserrat">
+          <p className="mb-10 w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus modi
             sequi repudiandae, exercitationem repellat ipsa, excepturi dolor
             mollitia facere, ipsum harum ut. Numquam perferendis iusto
@@ -53,7 +56,7 @@ export default function Section() {
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's just similation
           </h3>
-          <p className="w-[90%] text-left font-montserrat">
+          <p className="w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus modi
             sequi repudiandae, exercitationem repellat ipsa, excepturi dolor
             mollitia facere, ipsum harum.
