@@ -5,7 +5,7 @@ import MidSection from "./components/MidSection";
 import CodeSection from "./components/CodeSection";
 
 export default function Home() {
-  const codeFile = `def evenNumbers(start:int, end:int, step:int):
+  const codeFile = `def evenNums(start, end, step):
   for i in range(start, end, step)
       if not i % 2:
           yield i
