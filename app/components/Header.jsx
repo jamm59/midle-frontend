@@ -3,24 +3,24 @@ export default function Header() {
   return (
     <header className="grid h-screen w-full place-items-center">
       <div
-        className="flex h-fit min-h-[80%] w-[70%] flex-col justify-center rounded-sm bg-[#F4F9F9] 
-      px-5 drop-shadow-2xl sm:grid sm:h-full sm:w-full sm:place-content-center sm:gap-5"
+        className="sm:text flex h-fit min-h-[80%] w-[70%] flex-col justify-center rounded-sm 
+      bg-[#F4F9F9] px-5 drop-shadow-2xl sm:grid sm:h-full sm:w-full sm:place-content-center sm:gap-5"
       >
         <div
-          className="absolute left-5 top-5 font-gasoek text-3xl font-extrabold text-gray-900
+          className="absolute left-5 top-5 font-gasoek text-3xl font-black text-gray-900
          sm:block sm:text-2xl sm:font-normal"
         >
-          Logo
+          midle
         </div>
-        <h1 className="h-fit min-h-[60%] w-[55%] text-left text-5xl font-black sm:w-full sm:text-4xl">
-          <span className="bg-gradient-to-r from-rose-600 to-teal-500 bg-clip-text font-moirai text-transparent">
+        <h1 className="h-fit min-h-[60%] w-[55%] text-left text-5xl sm:w-full sm:text-4xl">
+          <span className="bg-black bg-clip-text font-moirai text-transparent">
             Code in any Spoken Language without worrying. Let us do the work for
             you.
           </span>
         </h1>
         <img
-          className="transiton-all absolute right-[20%] top-[20%] rounded-xl bg-rose-500
-           drop-shadow-lg sm:static sm:m-auto"
+          className="transiton-all absolute right-[20%] top-[20%] cursor-pointer rounded-xl bg-rose-500
+           drop-shadow-lg duration-200 hover:top-[19%] sm:static sm:m-auto sm:my-5"
           src={"/languages.png"}
           alt="code"
           width={150}

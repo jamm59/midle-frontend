@@ -1,8 +1,14 @@
-//import { twMerge } from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 export default function Section() {
-  const color = ["blue", "green", "yellow", "teal"][
-    Math.floor(Math.random() * 4)
-  ];
+  const color = [
+    "bg-yellow-500",
+    "bg-sky-500",
+    "bg-blue-500",
+    "bg-green-500",
+    "bg-teal-500",
+  ][Math.floor(Math.random() * 5)];
+  const styles = twMerge("grid place-items-center rounded-md p-3 pb-7", color);
+
   return (
     <section
       className="m-auto grid h-fit min-h-screen w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl
@@ -31,7 +37,7 @@ export default function Section() {
       </div>
       <div
         className="grid h-[80%] place-items-center rounded-md 
-      font-lilita text-[3rem] font-black text-white"
+      font-lilita text-[3rem] font-black text-white sm:h-full"
       >
         <span className="text-green-500">PYTHON,</span>
         <span className="text-yellow-500">JAVASCRIPT,</span>
@@ -39,10 +45,7 @@ export default function Section() {
         <span className="text-rose-500">JAVA,</span>
         <span>AND MORE ...</span>
       </div>
-      <div
-        className="grid place-items-center rounded-md bg-teal-500 p-3 pb-7"
-        //className={`bg-${color}-500 grid place-items-center p-3 pb-7 rounded-md`}
-      >
+      <div className={styles}>
         <div className="grid place-items-center p-2 ">
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's not a compiler!
