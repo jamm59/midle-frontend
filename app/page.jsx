@@ -8,16 +8,16 @@ export default function Home() {
   const codeFile = `def evenNums(start, end, step):
   for i in range(start, end, step)
       if not i % 2:
-          yield i
+          yield i#
   return "No even numbers found!"`;
   const codeLanguage = "PYTHON";
   return (
-    <div className="container w-auto">
+    <>
       <Header />
       <Section />
       <MidSection />
       <CodeSection codeFile={codeFile} codeLanguage={codeLanguage} />
       <Footer />
-    </div>
+    </>
   );
 }

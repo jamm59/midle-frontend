@@ -4,7 +4,7 @@ export default function Header() {
     <header className="grid h-screen w-full place-items-center">
       <div
         className="flex h-fit min-h-[80%] w-[70%] flex-col justify-center rounded-sm bg-[#F4F9F9] 
-      px-4 drop-shadow-2xl sm:grid sm:h-full sm:w-full sm:place-content-center sm:gap-5"
+      px-5 drop-shadow-2xl sm:grid sm:h-full sm:w-full sm:place-content-center sm:gap-5"
       >
         <div
           className="absolute left-5 top-5 font-gasoek text-3xl font-extrabold text-gray-900

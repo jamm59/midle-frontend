@@ -22,8 +22,8 @@ function BottomSection() {
   return (
     <>
       <div
-        className="m-auto my-10 grid min-h-fit w-[98%] place-items-center rounded-lg
-        bg-gradient-to-r from-gray-900 via-gray-900 to-teal-500 py-5 sm:bg-gradient-to-br sm:px-3"
+        className="m-auto my-10 grid min-h-fit w-[98%] place-items-center rounded-lg bg-gradient-to-r
+        from-gray-900 via-gray-900 to-teal-500 py-6 sm:bg-gradient-to-br sm:px-3"
       >
         <h3 className="font-lilita text-[2rem] font-bold text-white">
           It's not a compiler!
