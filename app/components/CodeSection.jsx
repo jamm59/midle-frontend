@@ -6,8 +6,8 @@ export default function CodeSection({ codeFile, codeLanguage }) {
     <>
       <div className="relative grid h-[120vh] w-full place-items-center sm:p-1">
         <div
-          className="grid h-[400px] w-[950px] grid-cols-4 overflow-hidden rounded-md shadow-2xl
-        sm:h-full sm:w-full sm:grid-cols-1 sm:grid-rows-2 sm:gap-4 md:overflow-visible"
+          className="grid h-[400px] w-[950px] grid-cols-4 overflow-hidden rounded-md shadow-2xl sm:h-full sm:w-full
+        sm:grid-cols-1 sm:grid-rows-2 sm:gap-4 md:overflow-visible lg:h-[60%] lg:w-[70%]"
         >
           <Code codeFile={codeFile} codeLanguage={codeLanguage} />
           <Output codeFile={codeFile} codeLanguage={codeLanguage} />
@@ -22,8 +22,8 @@ function BottomSection() {
   return (
     <>
       <div
-        className="m-auto my-10 grid min-h-fit w-[98%] place-items-center rounded-lg
-      bg-white py-6 shadow-2xl sm:bg-gradient-to-br sm:px-3"
+        className="d m-auto my-10 grid min-h-fit w-[98%] place-items-center
+      rounded-lg bg-white py-6 shadow-2xl sm:bg-gradient-to-br sm:px-3"
       >
         <h3 className="font-lilita text-[2rem] font-bold text-black">
           It's not a compiler!

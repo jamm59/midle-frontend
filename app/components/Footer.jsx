@@ -9,7 +9,7 @@ export default function Footer() {
           </span>
         </h1>
         <h1></h1>
-        <p className="text-md font-monterrat h-[90%] w-[50%] scroll-py-24 rounded-md text-left text-white sm:w-fit sm:text-center">
+        <p className="text-md h-[90%] w-[50%] scroll-py-24 rounded-md text-left font-openSans text-white sm:w-fit sm:text-center">
           Our app serves as a powerful middleware solution, enabling effortless
           translation of non-English syntax into English, allowing you to
           execute your code seamlessly behind the scenes. Say goodbye to
@@ -26,11 +26,19 @@ export default function Footer() {
           <span className="grid place-items-center">
             @{new Date().getFullYear()} All Rights Reserved
           </span>
-          <div className="flex items-center justify-between px-16 font-bold text-gray-900 sm:px-6">
-            <a href="">About</a>
-            <a href="">Github</a>
-            <a href="">Portfolio</a>
-            <a href="">Contact</a>
+          <div className="flex items-center justify-between px-16  text-gray-900 sm:px-6">
+            <a href="" className="transition-all hover:mb-3">
+              About
+            </a>
+            <a href="" className="transition-all hover:mb-3">
+              Github
+            </a>
+            <a href="" className="transition-all hover:mb-3">
+              Portfolio
+            </a>
+            <a href="" className="transition-all hover:mb-3">
+              Contact
+            </a>
           </div>
         </div>
       </section>

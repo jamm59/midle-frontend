@@ -29,9 +29,9 @@ export default function Code({ codeFile, codeLanguage }) {
             </div>
           );
         })}
-        <div className="absolute bottom-5 flex w-full grid-cols-2 items-center justify-around text-3xl font-black leading-loose text-white">
+        <div className="absolute bottom-5 flex w-full grid-cols-2 items-center justify-around text-3xl leading-loose text-white">
           <span className="font-lilita">{codeLanguage}</span>
-          <button className="flex items-center justify-center rounded-md  bg-purple-500 px-3 py-1 font-moirai text-3xl text-black transition-all">
+          <button className="flex items-center justify-center rounded-md bg-purple-500 px-3 py-1 font-moirai text-3xl transition-all">
             run
             <PlayArrowIcon className="relative top-1 m-2" />
           </button>
