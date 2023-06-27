@@ -3,7 +3,6 @@ import Button from "../components/Button";
 import Output from "../components/Output";
 import Editor from "@monaco-editor/react";
 export default function Home() {
-  //alert("This will not work with files longer than five lines!");
   const codeFile = `# This is a comment testing the code
 # This is another comment testing the code
 def evenNumbers(start:int, end:int, step:int):
