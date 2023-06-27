@@ -49,7 +49,7 @@ function CodeEditor({ codeFile }) {
   };
   return (
     <Editor
-      className="bg-gray-900 p-4 text-lg"
+      className="ml-5 mt-5 rounded-lg bg-white p-2 text-lg"
       height="85%"
       width="100%"
       defaultLanguage="python"

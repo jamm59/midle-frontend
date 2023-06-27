@@ -21,7 +21,8 @@ module.exports = {
         // => @media (max-width: 639px) { ... }
       },
       animation: {
-        typing: "type 2s steps(var(--steps-character), end) forwards",
+        typing:
+          "type 1s steps(var(--steps-character), end) forwards var(--animation-delay)",
       },
       keyframes: {
         type: {

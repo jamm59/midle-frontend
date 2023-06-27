@@ -24,7 +24,15 @@ export default function Code({
       <div className="my-2 flex w-full flex-col items-center rounded-md px-1 font-mono">
         {codeFile.split("\n").map((line, index) => {
           return (
-            <div className="line" key={index}>
+            <div
+              style={{
+                "--steps-character": `${line.length + 1}`,
+                "--animation-delay": `${index * 0.5}s`,
+              }}
+              className="line relative z-0 before:absolute before:inset-0
+               before:z-30 before:animate-typing before:bg-[var(--background-main)]"
+              key={index}
+            >
               <span className="line-span font-black">{">"}</span>
               <pre
                 className="line-p hljs"
