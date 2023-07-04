@@ -8,7 +8,7 @@ export default function Header() {
       >
         <div
           className="absolute left-5 top-5 font-gasoek text-3xl font-black text-gray-900
-         sm:block sm:text-2xl sm:font-normal"
+          sm:block sm:text-2xl sm:font-normal"
         >
           midle
         </div>

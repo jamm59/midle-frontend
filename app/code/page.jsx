@@ -14,7 +14,10 @@ def evenNumbers(start:int, end:int, step:int):
 
   return (
     <>
-      <div className="absolute inset-0 grid grid-cols-2 bg-gray-900">
+      <div
+        className="absolute inset-0 grid grid-cols-2 bg-gray-900
+      md:h-fit md:grid-cols-1 md:grid-rows-2"
+      >
         <div className="flex h-full flex-col items-center justify-between">
           <CodeEditor codeFile={codeFile} />
           <div className="grid h-[20%] min-h-fit w-full place-items-center font-lilita text-3xl font-black leading-loose text-white">

@@ -3,6 +3,7 @@ import Section from "./components/Section";
 import Footer from "./components/Footer";
 import MidSection from "./components/MidSection";
 import CodeSection from "./components/CodeSection";
+import BottomSection from "./components/BottomSection";
 
 export default function Home() {
   const codeFile = `def evenNums(start, end, step):
@@ -17,6 +18,7 @@ export default function Home() {
       <Section />
       <MidSection />
       <CodeSection codeFile={codeFile} codeLanguage={codeLanguage} />
+      <BottomSection />
       <Footer />
     </>
   );
