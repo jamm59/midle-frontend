@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import Section from "./components/Section";
+import TopSection from "./components/TopSection";
 import Footer from "./components/Footer";
 import MidSection from "./components/MidSection";
 import CodeSection from "./components/CodeSection";
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Section />
+      <TopSection />
       <MidSection />
       <CodeSection codeFile={codeFile} codeLanguage={codeLanguage} />
       <BottomSection />

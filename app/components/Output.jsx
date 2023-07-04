@@ -7,12 +7,12 @@ import "highlight.js/styles/atom-one-dark.css";
 export default function Code({
   codeFile,
   codeLanguage,
-  class_name,
+  className,
   label = true,
 }) {
   const original =
-    "output relative col-span-2 flex h-full flex-col items-center sm:w-full !overflow-hidden rounded-md";
-  class_name = class_name ? twMerge(original, class_name) : original;
+    "output relative col-span-2 flex h-full flex-col items-center sm:w-full !overflow-hidden rounded-md bg-orange-600";
+  className = className ? twMerge(original, className) : original;
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -21,7 +21,7 @@ export default function Code({
       className="relative col-span-2 flex flex-col items-center border-[var(--background-main)] bg-gray-900 px-2 py-3 sm:h-full
     sm:rounded-md "
     >
-      <div className="my-2 flex w-full flex-col items-center rounded-md px-1 font-mono">
+      <div className="my-2 flex w-full flex-col items-center rounded-md px-1 font-mono sm:px-0">
         {codeFile.split("\n").map((line, index) => {
           return (
             <div
