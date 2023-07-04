@@ -11,15 +11,15 @@ export default function Section() {
 
   return (
     <section
-      className="m-auto grid h-fit min-h-screen w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl
-    sm:grid-cols-1 sm:grid-rows-3"
+      className="m-auto grid h-fit w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl sm:grid-cols-1
+    sm:grid-rows-3"
     >
       <div className="grid place-items-center rounded-md bg-rose-600">
         <div className="grid place-items-center p-2">
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             What is Midle?
           </h3>
-          <p className="mb-10 w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
+          <p className="mb-10 w-[90%] text-left font-openSans text-sm sm:text-white">
             Midle is a powerful tool designed for developers who prefer coding
             in their native language rather than English. It acknowledges that
             most programming languages are built with English-based syntax and
@@ -30,10 +30,10 @@ export default function Section() {
             linked to compilers or interpreters, eliminating unnecessary stress
             and language barriers.
           </p>
-          <h3 className="font-lilita text-[2rem] font-bold text-white">
-            Code in any language of your choice!
+          <h3 className="w-full text-center font-lilita text-[2rem] font-bold text-white">
+            Code in any language!
           </h3>
-          <p className="w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
+          <p className="text-sms w-[90%] text-left font-openSans sm:text-white">
             With Midle, you have the freedom to code in any language you're
             comfortable with. Whether it's Java, Python, C++, or any other
             programming language, Midle acts as a reliable intermediary that
@@ -45,21 +45,24 @@ export default function Section() {
         </div>
       </div>
       <div
-        className="grid h-[80%] place-items-center rounded-md 
+        className="grid h-fit place-items-center rounded-md 
       font-lilita text-[3rem] font-black text-white sm:h-full"
       >
-        <span className="text-green-500">PYTHON,</span>
-        <span className="text-yellow-500">JAVASCRIPT,</span>
-        <span className="text-sky-500">GOLANG,</span>
-        <span className="text-rose-500">JAVA,</span>
-        <span>AND MORE ...</span>
+        <div className="grid w-[98%] place-items-center rounded-md">
+          <span className="text-green-500">PYTHON,</span>
+          <span className="text-yellow-500">JAVASCRIPT,</span>
+          <span className="text-sky-500">GOLANG,</span>
+          <span className="text-rose-500">JAVA,</span>
+          <span className="text-teal-500">C++,</span>
+          <span className="text-white">AND MORE,</span>
+        </div>
       </div>
       <div className={styles}>
         <div className="grid place-items-center p-2 ">
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's just similation!
           </h3>
-          <p className="mb-10 w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
+          <p className="mb-10 w-[90%] text-left font-openSans text-sm sm:text-white">
             Midle operates as a simulation platform, offering a seamless
             experience for developers. It emulates the process of translating
             non-English code into English, facilitating smooth execution in the
@@ -72,7 +75,7 @@ export default function Section() {
           <h3 className="font-lilita text-[2rem] font-bold text-white">
             It's not a compiler!
           </h3>
-          <p className="w-[90%] text-left font-montserrat sm:text-center sm:font-openSans sm:text-white">
+          <p className="w-[90%] text-left font-openSans text-sm sm:text-white">
             It's essential to understand that Midle is not a compiler itself.
             Rather, it serves as an intermediary tool that aids in translating
             code from various languages into English. While compilers are
