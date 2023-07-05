@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import MidSection from "./components/MidSection";
 import CodeSection from "./components/CodeSection";
 import BottomSection from "./components/BottomSection";
+import Navigation from "./components/Navigation";
 
 export default function Home() {
   const codeFile = `def evenNums(start, end, step):
@@ -14,6 +15,7 @@ export default function Home() {
   const codeLanguage = "PYTHON";
   return (
     <>
+      <Navigation />
       <Header />
       <TopSection />
       <MidSection />

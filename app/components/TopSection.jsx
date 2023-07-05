@@ -11,8 +11,8 @@ export default function Section() {
 
   return (
     <section
-      className="m-auto grid h-fit w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl sm:grid-cols-1
-    sm:grid-rows-3"
+      className="m-auto grid h-fit w-[98%] grid-cols-3 overflow-hidden rounded-lg bg-gray-900 p-3 shadow-2xl sm:w-full sm:grid-cols-1 sm:grid-rows-3 sm:rounded-none
+    sm:py-4"
     >
       <div className="grid place-items-center rounded-md bg-rose-600">
         <div className="grid place-items-center p-2">
