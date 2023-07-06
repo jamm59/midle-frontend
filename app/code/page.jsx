@@ -2,6 +2,7 @@
 import Navigation, { MenuItem } from "../components/Navigation";
 import Output from "../components/Output";
 import Editor from "@monaco-editor/react";
+import { useState } from "react";
 export default function Home() {
   const codeFile = `# This is a comment testing the code
 # This is another comment testing the code
@@ -11,7 +12,7 @@ def evenNumbers(start:int, end:int, step:int):
           yield i
   return "No even numbers found!"`;
   const codeLanguage = "PYTHON";
-
+  const [percentage, setPercentage] = useState(57);
   return (
     <>
       <div
@@ -38,23 +39,30 @@ def evenNumbers(start:int, end:int, step:int):
       </div>
       <Navigation>
         <MenuItem>
-          <details>
-            <summary>Font Size</summary>
-            <div class="flex h-4 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
-              <div
-                className="flex flex-col justify-center overflow-hidden bg-blue-500 text-center text-xs text-white"
-                role="progressbar"
-                style={{ width: "57%" }}
-                aria-valuenow="57"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                57%
+          <>
+            <div>Font Size</div>
+            <div className="flex items-center justify-center">
+              <span onClick={() => setPercentage((percent) => percent - 1)}>
+                -
+              </span>
+              <div class="mx-3 flex h-4 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+                <div
+                  className="flex flex-col justify-center overflow-hidden bg-blue-500 text-center text-xs text-white"
+                  role="progressbar"
+                  style={{ width: `${percentage}%` }}
+                  aria-valuenow={percentage}
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  {percentage + "%"}
+                </div>
               </div>
+              <span onClick={() => setPercentage((percent) => percent + 1)}>
+                +
+              </span>
             </div>
-          </details>
+          </>
         </MenuItem>
-
         <MenuItem>
           <details>
             <summary>Font</summary>
