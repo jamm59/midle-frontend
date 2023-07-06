@@ -2,15 +2,15 @@
 
 import { useRef } from "react";
 
-const MenuItem = ({ children }) => {
+export const MenuItem = ({ children }) => {
   return (
-    <div className="mb-3 hidden w-[40%] rounded-md bg-gray-900 p-3 text-white shadow-md">
+    <div className="mb-3 hidden w-[40%] rounded-md bg-gray-900 p-3 text-white shadow-md transition-all duration-200 hover:translate-x-2 hover:shadow-lg sm:w-[60%]">
       {children}
     </div>
   );
 };
 
-export default function Navigation() {
+export default function Navigation({ children }) {
   const navRef = useRef(null);
 
   const toggleCSSclasses = (el, cls) =>
@@ -21,8 +21,11 @@ export default function Navigation() {
       child.classList && child.classList.toggle(cl);
     });
   };
-  const handleNavClick = () => {
-    const classNames = ["w-[50%]", "h-[95%]", "md:w-[80%]"];
+  const handleNavClick = (e) => {
+    // if (e.target === navRef) {
+    //   console.log("something");
+    // }
+    const classNames = ["w-[40%]", "h-[95%]", "md:w-[90%]"];
     navRef.current ? toggleCSSclasses(navRef.current, classNames) : undefined;
     navRef.current
       ? toggleChildrenclasses(navRef.current, "hidden")
@@ -34,12 +37,9 @@ export default function Navigation() {
       onClick={handleNavClick}
       className="fixed bottom-5 right-5 z-50 flex flex-col items-start justify-start rounded-md
          bg-white px-5 py-2 font-lilita text-black shadow-lg 
-         transition-all duration-500 ease-in-out sm:bg-teal-400"
+         transition-all duration-500 ease-in-out"
     >
-      <MenuItem children={"fontSize"} />
-      <MenuItem children={"font"} />
-      <MenuItem children={"about"} />
-      <MenuItem children={"exit"} />
+      {children}
       <img src="/menu-bar.png" className="mt-auto h-5 w-5" />
     </nav>
   );

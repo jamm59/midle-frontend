@@ -1,5 +1,5 @@
 "use client";
-import Navigation from "../components/Navigation";
+import Navigation, { MenuItem } from "../components/Navigation";
 import Output from "../components/Output";
 import Editor from "@monaco-editor/react";
 export default function Home() {
@@ -24,7 +24,7 @@ def evenNumbers(start:int, end:int, step:int):
             <span className="mx-3">{codeLanguage}</span>
           </div>
         </div>
-        <div className="h-fit w-fit bg-gray-900">
+        <div className="h-full min-h-fit w-full bg-gray-900">
           <Output
             codeFile={codeFile}
             codeLanguage={codeLanguage}
@@ -36,7 +36,54 @@ def evenNumbers(start:int, end:int, step:int):
           </div>
         </div>
       </div>
-      <Navigation />
+      <Navigation>
+        <MenuItem>
+          <details>
+            <summary>Font Size</summary>
+            <div class="flex h-4 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+              <div
+                className="flex flex-col justify-center overflow-hidden bg-blue-500 text-center text-xs text-white"
+                role="progressbar"
+                style={{ width: "57%" }}
+                aria-valuenow="57"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                57%
+              </div>
+            </div>
+          </details>
+        </MenuItem>
+
+        <MenuItem>
+          <details>
+            <summary>Font</summary>
+            <ul className="overflow-hidden px-2 py-1 font-mono">
+              <li className="mr-3 bg-white p-2 text-black hover:bg-slate-200">
+                Consolas
+              </li>
+              <li className="mr-3 bg-white p-2 text-black hover:bg-slate-200">
+                Montserrat
+              </li>
+              <li className="mr-3 bg-white p-2 text-black hover:bg-slate-200">
+                Open Sans
+              </li>
+              <li className="mr-3 bg-white p-2 text-black hover:bg-slate-200">
+                Roboto
+              </li>
+            </ul>
+          </details>
+        </MenuItem>
+        <MenuItem>
+          <a href="/about">About </a>
+        </MenuItem>
+        <MenuItem>
+          <a href="/">Home </a>
+        </MenuItem>
+        <MenuItem>
+          <a href="/">Close </a>
+        </MenuItem>
+      </Navigation>
     </>
   );
 }
@@ -49,7 +96,7 @@ function CodeEditor({ codeFile }) {
   };
   return (
     <Editor
-      className="ml-5 mt-5 rounded-lg bg-white p-2 text-lg md:ml-0 md:mt-0 md:rounded-none md:rounded-r-lg md:py-5"
+      className="ml-5 mt-5 rounded-lg bg-white p-2 text-lg sm:mt-7 md:ml-0 md:mt-0 md:rounded-none md:rounded-r-lg md:py-5"
       height="85%"
       width="100%"
       defaultLanguage="python"

@@ -18,7 +18,7 @@ export default function Code({
   }, []);
   return (
     <div
-      className="relative col-span-2 flex flex-col items-center border-[var(--background-main)] bg-gray-900 px-2 py-3 sm:h-full
+      className="relative col-span-2 flex min-h-fit flex-col items-center border-[var(--background-main)] bg-gray-900 px-2 py-3 sm:h-full
     sm:rounded-md "
     >
       <div className="my-2 flex w-full flex-col items-center rounded-md px-1 font-mono sm:px-0">
