@@ -15,12 +15,12 @@ export default function Home() {
   const codeLanguage = "PYTHON";
   return (
     <>
-      <Navigation>
+      {/* <Navigation>
         <MenuItem children={"Home"} />
         <MenuItem children={"Help Improve"} />
         <MenuItem children={"About"} />
         <MenuItem children={"Exit"} />
-      </Navigation>
+      </Navigation> */}
       <Header />
       <TopSection />
       <MidSection />

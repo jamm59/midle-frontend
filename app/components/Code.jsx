@@ -2,7 +2,7 @@
 //import { marked } from "marked";
 import { useEffect } from "react";
 import "highlight.js/styles/atom-one-dark.css";
-import { hljs, PlayArrowIcon } from "../../lib/stuff";
+import { hljs, handlePusherClick } from "../../lib/stuff";
 
 export default function Code({ codeFile, codeLanguage }) {
   useEffect(() => {
@@ -32,11 +32,11 @@ export default function Code({ codeFile, codeLanguage }) {
         <div className="absolute bottom-5 flex w-full grid-cols-2 items-center justify-around text-3xl leading-loose text-white">
           <span className="font-lilita">{codeLanguage}</span>
           <button
-            className="flex items-center justify-center rounded-md bg-purple-500
-           px-3 py-1 font-gasoek text-xl transition-all duration-200 hover:translate-x-3"
+            className="tile hover:translate-x-1"
+            onClick={handlePusherClick}
           >
-            run
-            <PlayArrowIcon className="relative top-1 m-2" />
+            <img src="/play.png" width={15} height={15} />
+            <span className="font-openSans text-sm text-black">Run</span>
           </button>
         </div>
       </div>

@@ -27,6 +27,11 @@ body {
 }
 
 @layer components {
+  .tile {
+    @apply flex min-w-fit cursor-pointer items-center justify-between gap-2
+    rounded-md bg-white px-5 py-2 text-sm text-black shadow-md transition-all
+    duration-100 ease-out hover:shadow-lg;
+  }
   .line {
     @apply relative mb-[0.1rem] w-full overflow-hidden rounded-md shadow-lg;
   }
